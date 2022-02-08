@@ -92,6 +92,7 @@
     {
       "model": "catalogo.Livro",
       "pk": 2,
+      
       "fields": {
           "titulo": "As Tranças de um Careca",
           "autor": "1",
