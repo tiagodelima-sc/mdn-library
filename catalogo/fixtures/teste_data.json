@@ -1,137 +1,139 @@
+
 [
-    {
-      "model": "catalogo.Genero",
-      "pk": 1,
-      "fields": {
-          "nome": "Ficção Cientifíca"
-      }
-    },
-    {
-      "model": "catalogo.Genero",
-      "pk": 2,
-      "fields": {
-          "nome": "Didático"
-      }
-    },
-    {
-      "model": "catalogo.Genero",
-      "pk": 3,
-      "fields": {
-          "nome": "Suspense"
-      }
-    },
-    {
-      "model": "catalogo.Genero",
-      "pk": 4,
-      "fields": {
-          "nome": "Terror"
-      }
-    },
-
-    {
-      "model": "catalogo.Linguaguem",
-      "pk": 1,
-      "fields": {
-          "nome": "Inglês"
-      }
-    },
-    {
-      "model": "catalogo.Linguaguem",
-      "pk": 2,
-      "fields": {
-          "nome": "Português"
-      }
-    },
-    {
-      "model": "catalogo.Linguaguem",
-      "pk": 3,
-      "fields": {
-          "nome": "Holandês"
-      }
-    },
-    {
-      "model": "catalogo.Autor",
-      "pk": 1,
-      "fields": {
-          "primeiro_nome": "José",
-          "ultimo_nome": "Pereira",
-          "data_nascimento": "1987-12-27"
-      }
-    },
-    {
-      "model": "catalogo.Autor",
-      "pk": 2,
-      "fields": {
-          "primeiro_nome": "Heimold",
-          "ultimo_nome": "Jungles",
-          "data_nascimento": "1981-05-13"
-      }
-    },
-    {
-      "model": "catalogo.Autor",
-      "pk": 3,
-      "fields": {
-          "primeiro_nome": "Casemiro",
-          "ultimo_nome": "Kunha",
-          "data_nascimento": "1939-02-14",
-          "data_falecimento": "1998-04-14"
-      }
-    },
-    {
-      "model": "catalogo.Livro",
-      "pk": 1,
-      "fields": {
-          "titulo": "A Volta dos que Não Foram",
-          "autor": "2",
-          "resumo": "A Viagem que Aconteceu mas não foi Realizada",
-          "isbn": "584584518",
-          "genero": [1,3],
-          "linguaguem": 3
-      }
-    },
-    {
-      "model": "catalogo.Livro",
-      "pk": 2,
-      
-      "fields": {
-          "titulo": "As Tranças de um Careca",
-          "autor": "1",
-          "resumo": "O Careca Cabeludo que estava Revoltado",
-          "isbn": "4587932541",
-          "genero": [1],
-          "linguaguem": 1
-      }
-    },
-    {
-      "model": "catalogo.Livro",
-      "pk": 3,
-      "fields": {
-          "titulo": "Poeira em Alto Mar",
-          "autor": "2",
-          "resumo": "Muita Poeira e Corrida em Alto Mar",
-          "isbn": "587451351",
-          "genero": [3,2],
-          "linguaguem": 2
-      }
-    },
-    {
-      "model": "catalogo.ExemplarLivro",
-      "pk": "34f91d73-ba3a-43ac-a2c6-1f31ec2020e0",
-      "fields": {
-          "livro": "1",
-          "editora": "Editora Casuan",
-          "data_devolucao": "2022-01-01",
-          "situacao": "e"
-      }
-    },
-    {
-      "model": "catalogo.ExemplarLivro",
-      "pk": "e642019b-b782-444c-92d7-686d780568b1",
-      "fields": {
-          "livro": "3",
-          "editora": "Editora Xereu",
-          "situacao": "d"
-      }
+  {
+    "model": "catalogo.Genero",
+    "pk": 1,
+    "fields": {
+      "nome": "Ficção Científica"
     }
-
+  },
+  {
+    "model": "catalogo.Genero",
+    "pk": 2,
+    "fields": {
+      "nome": "Didático"
+    }
+  },
+  {
+    "model": "catalogo.Genero",
+    "pk": 3,
+    "fields": {
+      "nome": "Suspense"
+    }
+  },
+  {
+    "model": "catalogo.Genero",
+    "pk": 4,
+    "fields": {
+      "nome": "Terror"
+    }
+  },
+  {
+    "model": "catalogo.Linguagem",
+    "pk": 1,
+    "fields": {
+      "nome": "Português"
+    }
+  },
+  {
+    "model": "catalogo.Linguagem",
+    "pk": 2,
+    "fields": {
+      "nome": "Inglês"
+    }
+  },
+  {
+    "model": "catalogo.Autor",
+    "pk": 1,
+    "fields": {
+      "primeiro_nome": "João",
+      "ultimo_nome": "Silva",
+      "data_nascimento": "2000-12-31"
+    }
+  },
+  {
+    "model": "catalogo.Autor",
+    "pk": 2,
+    "fields": {
+      "primeiro_nome": "Maria",
+      "ultimo_nome": "Souza",
+      "data_nascimento": "1980-10-20",
+      "data_falecimento": "2021-01-25"
+    }
+  },
+  {
+    "model": "catalogo.Livro",
+    "pk": 1,
+    "fields": {
+      "titulo": "Programação com Django",
+      "autor": 1,
+      "resumo": "Desenvolvendo aplicações web com Django.",
+      "isbn": "1234567891011",
+      "genero": [2],
+      "linguagem": 1
+    }
+  },
+  {
+    "model": "catalogo.Livro",
+    "pk": 2,
+    "fields": {
+      "titulo": "Livro de Terror",
+      "autor": 2,
+      "resumo": "Este é um livro que dá muito medo.",
+      "isbn": "1110987654321",
+      "genero": [3,4],
+      "linguagem": 2
+    }
+  },
+  {
+      "model": "catalogo.Livro",
+      "pk": 3,
+      "fields": {
+        "titulo": "Livro com muitas categorias",
+        "autor": 1,
+        "resumo": "Este é um livro com muitas categorias.",
+        "isbn": "1110987654321",
+        "genero": [1,2,3,4],
+        "linguagem": 1
+      }
+  },
+  {
+    "model": "catalogo.ExemplarLivro",
+    "pk": "4de60d63-a10d-474c-91f4-bc3e37a6b9d7",
+    "fields": {
+      "livro": 1,
+      "editora": "Editora Brasil",
+      "data_devolucao": "2022-01-01",
+      "situacao": "e"
+    }
+  },
+  {
+    "model": "catalogo.ExemplarLivro",
+    "pk": "a69a713b-1830-42b4-830e-dbe183a3540f",
+    "fields": {
+      "livro": 2,
+      "editora": "Editora Inglesa",
+      "situacao": "d"
+    }
+  },
+  {
+    "model": "catalogo.ExemplarLivro",
+    "pk": "68885a6c-3810-4838-a600-2f43fbe101c1",
+    "fields": {
+      "livro": 2,
+      "editora": "Editora Inglesa",
+      "data_devolucao": "2022-12-31",
+      "situacao": "m"
+    }
+  },
+  {
+    "model": "catalogo.ExemplarLivro",
+    "pk": "8b5f4344-53a4-497a-8ff9-35a04c8abc9c",
+    "fields": {
+      "livro": 3,
+      "editora": "Editora Boa Impressão",
+      "data_devolucao": "2022-11-11",
+      "situacao": "r"
+    }
+  }
 ]

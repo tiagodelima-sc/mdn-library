@@ -1,5 +1,7 @@
+from audioop import reverse
 from pyexpat import model
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -37,6 +39,9 @@ class Livro(models.Model):
       resumo = models.TextField(max_length=1000, help_text='Digite uam descrição do livro')
       isbn = models.ManyToManyField(Genero, help_text='Selecione um gênero para esse livro.')
       linguagem = models.ForeignKey(Linguaguem, on_delete=models.SET_NULL, null=True)
+      
+      def get_absolute_url(self):
+          return reverse('livro-detalhes', args=[str(self.id)])
       
       def __str__(self):
         return self.titulo
