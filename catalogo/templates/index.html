@@ -4,19 +4,19 @@
 
 {% block content %}
 
-<div class="content-block">
-  <h1>Minha Biblioteca - Página Inicial</h1>
-  <p>Bem vindo a minha Biblioteca, um site desenvolvido para aplicar as sessões de estudos</p>
 
-  <h2>Conteudo Dinámico</h2>
-  <p>A biblioteca tem atualmenteos seguintes registros</p>
-  <ul>
-    <li><strong>Livros: </strong>{{ num_livros }}</li>
-    <li><strong>Exemplares: </strong>{{ num_exemplares }}</li>
-    <li><strong>Exemplares Disponiveis: </strong>{{ num_exemplares_disponiveis }}</li>
-    <li><strong>Autores: </strong>{{ num_autores }}</li>
-  </ul>
-</div>
+<h1>Minha Biblioteca - Página Inicial</h1>
+<p>Bem vindo a minha Biblioteca, um site desenvolvido para aplicar as sessões de estudos</p>
+
+<h2>Conteudo Dinámico</h2>
+<p>A biblioteca tem atualmenteos seguintes registros</p>
+<ul>
+  <li><strong>Livros: </strong>{{ num_livros }}</li>
+  <li><strong>Exemplares: </strong>{{ num_exemplares }}</li>
+  <li><strong>Exemplares Disponiveis: </strong>{{ num_exemplares_disponiveis }}</li>
+  <li><strong>Autores: </strong>{{ num_autores }}</li>
+</ul>
+
 
 <p>Você já visitou esta página {{ num_visitas }}{% if num_visitas == 1 %} vez{% else %} vezes{% endif %}.</p>
 
