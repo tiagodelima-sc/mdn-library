@@ -29,14 +29,14 @@
         <ul class="sidebar-nav">
           <li><a href="{% url 'index' %}">Inicio</a></li>
           <li><a href="{% url 'livros' %}">Todos os Livros</a></li>
-          <li><a href="">Todos os Autores</a></li>
+          <li><a href="">Todos os autores</a></li>
           {% if user.is_authenticated %}
           <li>User: {{ user.get_username }}</li>
+          <li><a href="{% url 'meus-emprestimos' %}">Meus Empréstimos</a></li>
           <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
           {% else %}
           <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
           {% endif %}
-
         </ul>
         {% endblock %}
 
