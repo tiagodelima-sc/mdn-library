@@ -17,11 +17,15 @@ def index(request):
     # Contando o numero de autores. A opcao 'all()' é implicita por padrao
     num_autores = Autor.objects.count()
     
+    num_visitas = request.session.get('num_visitas', 0)
+    request.session['num_visitas'] = num_visitas + 1
+    
     contexto = {
       'num_livros': num_livros,
       'num_exemplares': num_exemplares,
       'num_exemplares_disponiveis': num_exemplares_disponiveis,
       'num_autores': num_autores,
+      'num_visitas': num_visitas,
     }
     
     # renderizando o template index.html com os dados da variavel contexto
