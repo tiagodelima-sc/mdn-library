@@ -29,7 +29,7 @@
         <ul class="sidebar-nav">
           <li><a href="{% url 'index' %}">Inicio</a></li>
           <li><a href="{% url 'livros' %}">Todos os Livros</a></li>
-          <li><a href="">Todos os autores</a></li>
+          <li><a href="{% url 'autores' %}">Todos os autores</a></li>
           {% if user.is_authenticated %}
           <li>User: {{ user.get_username }}</li>
           <li><a href="{% url 'meus-emprestimos' %}">Meus Empréstimos</a></li>
